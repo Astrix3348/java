@@ -19,7 +19,7 @@ public class Library {
 	}
     public void addBook(Book[] b) {
     	System.out.println("How many books you want to add");
-    	int n = s.nextInt();
+    	n = s.nextInt();
     	for(int i=0; i<n; i++) {
     		b[i] = new Book(s.nextInt(), s.next(), s.next(), s.nextInt());
     	}
@@ -35,12 +35,14 @@ public class Library {
     		    }	
     	    }
     		  b[n-1] = null;
+    		  n--;
     	}
     	
     	System.out.println("Book has been successfully removed");
     }
     
     public void showBook(Book[] b) {
+  
     	for(int i=0; i<n; i++) {
     		if(b[i]!=null) {
     		   b[i].displayBookDetails();
