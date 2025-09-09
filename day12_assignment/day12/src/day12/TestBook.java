@@ -14,6 +14,8 @@ public class TestBook {
 			System.out.println("3--->Display Book");
 			System.out.println("4--->Check if the book exists");
 			System.out.println("5--->Get the book");
+			System.out.println("6--->Update price");
+			System.out.println("7--->Check if Exists");
 			
 			n = s.nextInt();
 			
@@ -28,9 +30,13 @@ public class TestBook {
 				break;
 			case 5: m.getBook();
 				break;
+			case 6: m.updateDetails();;
+			    break;
+			case 7: m.existsBookObject();;
+		        break;
 			}
 			
-		}while(n!=6);
+		}while(n!=8);
 		
 		
 	}
