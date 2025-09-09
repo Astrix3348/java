@@ -121,6 +121,22 @@ class Method{
 		        System.out.println("No, this book does not exist.");
 		    }
 		}
+	 
+	 public void iterateUsingKeySet() {
+		    System.out.println("Iterating using keySet():");
+		    for (Integer key : h.keySet()) {
+		        System.out.println("Key: " + key);
+		    }
+		}
+	 
+	 public void iterateUsingValues() {
+		    System.out.println("Iterating using values():");
+		    for (Book book : h.values()) {
+		        System.out.println("Value: " + book);
+		    }
+		}
+
+
 
 	
 }
