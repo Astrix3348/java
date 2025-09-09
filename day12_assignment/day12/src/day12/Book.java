@@ -23,6 +23,23 @@ public class Book {
 	public String toString() {
 		return "Book [bookId=" + bookId + ", title=" + title + ", author=" + author + ", price=" + price + "]";
 	}
+	
+	@Override
+	public boolean equals(Object obj) {
+	    if (this == obj) return true;
+	    if (obj == null || getClass() != obj.getClass()) return false;
+
+	    Book book = (Book) obj;
+	    return bookId == book.bookId &&
+	           Double.compare(book.price, price) == 0 &&
+	           title.equals(book.title) &&
+	           author.equals(book.author);
+	}
+
+	@Override
+	public int hashCode() {
+	    return java.util.Objects.hash(bookId, title, author, price);
+	}
 
 }
 
@@ -69,19 +86,41 @@ class Method{
 		}
 	 }
 	 
-//	public void updateDetails(Book b) {	
-//		    System.out.println("Enter the updated price");
-//		    double n = s.nextDouble();
-//		    
-//			Book dummy = new Book(b.bookId, b.title , b.author, n);
-//			h.replace(1, dummy);
-//			displayBooks();
-//	}
+	public void updateDetails() {	
+		System.out.println("Enter the id of the book whose price you want to update");
+		int id = s.nextInt();
+		Book oldBook = h.get(id);
+		System.out.println("Enter New Price");
+		double newPrice = s.nextDouble();
+		
+		Book newBook = new Book(oldBook.bookId, oldBook.title, oldBook.author, newPrice);
+		h.replace(id, newBook);
+		System.out.println("Price has been updated");
+		   
+	}
 	
 	 public void removeBook() {
 		 System.out.println("Enter the id you want to remove");
 		 int id = s.nextInt();
 		 h.remove(id);
 	 }
+	 
+	 public void existsBookObject() {
+		    System.out.println("Enter Book details to check existence:");
+		    System.out.println("ID, Title, Author, Price");
+		    int id = s.nextInt();
+		    String title = s.next();
+		    String author = s.next();
+		    double price = s.nextDouble();
+
+		    Book b = new Book(id, title, author, price);
+
+		    if (h.containsValue(b)) {
+		        System.out.println("Yes, this book exists in the collection.");
+		    } else {
+		        System.out.println("No, this book does not exist.");
+		    }
+		}
+
 	
 }
