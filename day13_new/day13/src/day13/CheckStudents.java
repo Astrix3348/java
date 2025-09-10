@@ -19,6 +19,8 @@ public class CheckStudents {
 			System.out.println("7--->iterate through key");
 			System.out.println("8--->iterate through value");
 			System.out.println("9--->Exit");
+			System.out.println("10--->Sort ascending");
+			System.out.println("11--->Sort descending");
 			
 			n = s.nextInt();
 			
@@ -40,6 +42,10 @@ public class CheckStudents {
 			case 8 : m.valueIteration();
 				break;
 			case 9 : System.out.println("Goodbye...!");
+			    break;
+			case 10 : m.ascending();
+			    break;
+			case 11 : m.descending();
 			    break;
 			
 			}
