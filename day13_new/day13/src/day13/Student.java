@@ -1,5 +1,7 @@
 package day13;
 
+import java.util.ArrayList;
+import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Scanner;
@@ -27,6 +29,7 @@ public class Student {
 
 class Methods{
 	HashMap<Integer, Student> h = new HashMap<>();
+	ArrayList<String> al = new ArrayList<>();
 	Scanner s = new Scanner(System.in);
 	
 	public HashMap<Integer, Student> addStudent(){
@@ -36,6 +39,7 @@ class Methods{
 			System.out.println("Enter Id, name, fees, courses");
 			Student stu = new Student(s.nextInt(), s.next(), s.nextDouble(), s.next());
 			h.put(stu.studentID, stu);
+			al.add(stu.name);
 		}
 		return h;
 	}
@@ -65,7 +69,7 @@ class Methods{
 	public void display() {
 		if(!h.isEmpty()) {
 		   for(Map.Entry<Integer, Student> m : h.entrySet()) {
-			   System.out.println(m.toString());
+			   System.out.println(m.getValue());
 		   }
 		}
 		else {
@@ -124,6 +128,16 @@ class Methods{
 		else {
 			System.out.println("No student to remove");
 		}
+	}
+	
+	public void ascending() {
+		Collections.sort(al);
+		System.out.println(al);
+	}
+	
+	public void descending() {
+		Collections.sort(al, Collections.reverseOrder());
+		System.out.println(al);
 	}
 	
 	
