@@ -1,0 +1,102 @@
+			core java-DAY12
+
+Part III
+
+Packages
+  java.util- collection
+  java.io  - file handling
+  java.lang - Exception
+
+inputStream
+
+outputStream
+
+to read or to write
+from source(console,file,socket)
+to 
+destination(console,file,socket)
+
+
+inputstream
+
+filereader
+
+
+
+
+outputstream
+filewriter
+
+
+----------------------------------------------------------
+
+read data(primitive,string,object)
+
+objectinputstream os = new objectinputstream()
+Employee e1 = os.readOBject()
+
+FileReader
+
+String str = br.readline()
+
+DatainputStream ds = new Datainputstream()
+int id =ds.readInt()
+
+
+
+
+write data(primitive,string,object)
+
+objectoutputstream os = objectoutptustrem()
+os.writeobject(e1)
+
+----------------------------------------------
+1) string read write
+create a file
+
+read from the console
+
+write data to the file
+
+read data from the file
+
+write to the console
+
+---------------------------------------------------
+2) object read write
+
+create a class
+create object
+create file
+write object to the file
+read object from the file
+apply logic to the object
+write object to the console
+---------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
