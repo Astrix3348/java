@@ -1,0 +1,70 @@
+			core java-DAY14
+
+Part III
+packages
+
+java.util - collection
+
+java.io   - file handling
+
+java.sql  - jdbc
+
+java.net  - socket programming
+
+
+ipaddress
+
+portno
+
+protocol
+
+
+
+client     server
+
+socket programming
+
+socket
+
+serversocekt
+
+getInputStream()
+getOutputstream()
+
+accept()
+
+
+
+client
+create socket
+
+read data from the console
+write to the socket
+
+
+server
+
+accept the connection
+
+read from the socket
+write to the cosole
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
